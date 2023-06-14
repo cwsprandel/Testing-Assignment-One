@@ -1,3 +1,10 @@
+const outputElement = document.getElementById('reverseOutput');
+
+function runFromButton() {
+    let input = document.getElementById('reverseInput').value;
+    reverse(input);
+}
+
 function reverse(string) {
     const stringLength = string.length;
     let newString = "";
@@ -6,8 +13,14 @@ function reverse(string) {
         const element = string[index];
         newString = newString + element;
     }
+    outputElement.textContent = newString;
 
     return newString;
 }
 
-module.exports = reverse;
+const button = document.getElementById('reverseButton');
+button.addEventListener('click', () => {
+    runFromButton();
+});
+
+export default reverse;
