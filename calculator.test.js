@@ -49,3 +49,32 @@ test('-4--3 = -1', () => {
 test('4-4 = 0', () => {
     expect(calculate.subtract(4,4)).toBe(0)
 })
+
+//------------- Divide test cases ----------------------------------------
+test('8/4 = 2', () => {
+    expect(calculate.divide(8,4)).toBe(2)
+})
+
+test('10/3 = 3.33', () => {
+    expect(calculate.divide(10,3)).toBe(3.33)
+})
+
+test('8-(blank) = error: enter two numbers', () => {
+    expect(calculate.divide(8)).toBe('error: enter two numbers')
+})
+
+test('5-! = error: enter two numbers', () => {
+    expect(calculate.divide(5,'!')).toBe('error: enter two numbers')
+})
+
+test('-4/8 = -0.5', () => {
+    expect(calculate.divide(-4,8)).toBe(-0.5)
+})
+
+test('-4/-2 = 2', () => {
+    expect(calculate.divide(-4,-2)).toBe(2)
+})
+
+test('4/0 = error: cannot divide by zero', () => {
+    expect(calculate.divide(4,0)).toBe('error: cannot divide by zero')
+})
