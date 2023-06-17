@@ -24,11 +24,20 @@ const calculate = {
         } else {
             if (typeof(x) === 'number' && typeof(y) === 'number') {
                 let answer = x / y
-                return answer
+                return Math.round(answer*100)/100
             } else {
                 let message = 'error: enter two numbers'
                 return message
             }
+        }
+    },
+    multiply : (x,y) => {
+        if (typeof(x) === 'number' && typeof(y) === 'number') {
+            let answer = x * y
+            return answer
+        } else {
+            let message = 'error: enter two numbers'
+            return message
         }
     }
 }

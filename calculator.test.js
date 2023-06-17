@@ -78,3 +78,32 @@ test('-4/-2 = 2', () => {
 test('4/0 = error: cannot divide by zero', () => {
     expect(calculate.divide(4,0)).toBe('error: cannot divide by zero')
 })
+
+//------------- Multiply test cases ----------------------------------------
+test('2*4 = 8', () => {
+    expect(calculate.multiply(2,4)).toBe(8)
+})
+
+test('10*3 = 30', () => {
+    expect(calculate.multiply(10,3)).toBe(30)
+})
+
+test('8*(blank) = error: enter two numbers', () => {
+    expect(calculate.multiply(8)).toBe('error: enter two numbers')
+})
+
+test('5*! = error: enter two numbers', () => {
+    expect(calculate.multiply(5,'!')).toBe('error: enter two numbers')
+})
+
+test('-4*8 = -32', () => {
+    expect(calculate.multiply(-4,8)).toBe(-32)
+})
+
+test('-3*-5 = 15', () => {
+    expect(calculate.multiply(-3,-5)).toBe(15)
+})
+
+test('4*0 = error: cannot divide by zero', () => {
+    expect(calculate.multiply(4,0)).toBe(0)
+})
