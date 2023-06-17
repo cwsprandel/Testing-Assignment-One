@@ -1,5 +1,4 @@
-//const reverse = require('./reverse');
-import reverse from './reverse';
+const reverse = require('./reverse');
 
 test('test should become tset', () => {
     expect(reverse('test')).toBe('tset');
